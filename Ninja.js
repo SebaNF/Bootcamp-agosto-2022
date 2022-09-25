@@ -23,3 +23,22 @@ ninja1.sayName();
 ninja1.showStats();
 ninja1.drinkSake();
 ninja1.showStats();
+
+class Sensei extends Ninja{
+    constructor(nombre){
+        super(nombre)
+        this.nombre = nombre;
+        this.salud = 200;
+        this.velocidad = 10;
+        this.fuerza = 10;
+        this.sabiduria = 10;
+    }
+    speakWisdom(){
+        super.drinkSake();
+        console.log('Si no sabes algo googlealo');
+    }
+}
+
+const sensei1 = new Sensei('Sr. Miyagi');
+sensei1.speakWisdom();
+sensei1.showStats();
